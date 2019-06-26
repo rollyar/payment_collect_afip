@@ -26,7 +26,7 @@ class Configuration(metaclass=PoolMeta):
 
 class ConfigurationPaymentCollectAccount(metaclass=PoolMeta):
     __name__ = 'payment_collect.configuration.account'
-    pos = fields.Many2One('account.pos', "Point of Sale", required=True,
+    pos = fields.Many2One('account.pos', "Point of Sale",
         domain=[('pos_daily_report', '=', False)])
 
     @staticmethod
