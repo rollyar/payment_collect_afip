@@ -15,6 +15,7 @@ class Collect(metaclass=PoolMeta):
         domain=[('pos_daily_report', '=', False)],
         states={
             'readonly': Eval('state') != 'processing',
+            'invisible': Eval('type') == 'send',
         },
         depends=['state'])
     invoice_type = fields.Many2One('account.pos.sequence', 'Comprobante',
