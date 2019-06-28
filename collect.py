@@ -17,6 +17,23 @@ class Collect(metaclass=PoolMeta):
             'readonly': Eval('state') != 'processing',
         },
         depends=['state'])
+    invoice_type = fields.Many2One('account.pos.sequence', 'Comprobante',
+        states={
+            'readonly': Eval('state') != 'processing',
+            'invisible': Eval('type') == 'send',
+        },
+        domain=[('pos', '=', Eval('pos'))], depends=['pos'])
+
+    @classmethod
+    def __setup__(cls):
+        super(Collect, cls).__setup__()
+        cls._buttons['create_invoices'].update({
+                'pre_validate':
+                ['AND',
+                    ('invoice_type', '!=', None),
+                    ('pos', '!=', None),
+                    ],
+                })
 
     @staticmethod
     def default_pos():

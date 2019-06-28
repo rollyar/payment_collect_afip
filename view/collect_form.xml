@@ -5,5 +5,7 @@ copyright notices and license terms. -->
     <xpath expr="/form/field[@name='create_invoices_button']" position="after">
         <label name="pos"/>
         <field name="pos" widget="selection"/>
+        <label name="invoice_type"/>
+        <field name="invoice_type" widget="selection"/>
     </xpath>
 </data>
