@@ -5,8 +5,6 @@ from trytond.model import fields
 from trytond.pool import PoolMeta, Pool
 from trytond.pyson import Eval
 
-__all__ = ['Collect']
-
 
 class Collect(metaclass=PoolMeta):
     __name__ = 'payment.collect'

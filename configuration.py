@@ -4,7 +4,6 @@
 from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
 
-__all__ = ['Configuration', 'ConfigurationPaymentCollectAccount']
 
 class Configuration(metaclass=PoolMeta):
     __name__ = 'payment_collect.configuration'
