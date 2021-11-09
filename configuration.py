@@ -16,7 +16,7 @@ class Configuration(metaclass=PoolMeta):
         pool = Pool()
         if field == 'pos':
             return pool.get('payment_collect.configuration.account')
-        return super(Configuration, cls).multivalue_model(field)
+        return super().multivalue_model(field)
 
     @classmethod
     def default_pos(cls, **pattern):

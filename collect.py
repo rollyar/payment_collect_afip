@@ -27,7 +27,7 @@ class Collect(metaclass=PoolMeta):
 
     @classmethod
     def __setup__(cls):
-        super(Collect, cls).__setup__()
+        super().__setup__()
         cls._buttons['create_invoices'].update({
                 'pre_validate':
                 ['AND',
