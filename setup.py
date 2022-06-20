@@ -56,10 +56,10 @@ else:
 download_url = 'https://github.com/gcoop-libre/payment_collect_afip/tree/%s' % branch
 
 LINKS = {
-    'trytonar_payment_collect': ('git+https://github.com/tryton-ar/'
+    'trytonar_payment_collect': ('git+https://github.com/rollyar/'
         'payment_collect.git@%s#egg=trytonar_payment_collect-%s' %
         (branch, series)),
-    'trytonar_account_invoice_ar': ('git+https://github.com/tryton-ar/'
+    'trytonar_account_invoice_ar': ('git+https://github.com/rollyar/'
         'account_invoice_ar.git@%s#egg=trytonar_account_invoice_ar-%s' %
         (branch, series)),
     }
